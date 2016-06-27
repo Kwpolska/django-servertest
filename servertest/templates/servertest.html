@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<style>
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 500px;
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+}
+footer {
+    color: #888;
+}
+</style>
+<title>Server Test</title>
+<h1>Server Test</h1>
+<p>Server information:</p>
+<ul>
+    {% for i in dbdata %}
+    <li><strong>{{ i.key }}</strong>: {{ i.value }}</li>
+    {% endfor %}
+</ul>
+<footer>Current time: {% now "c" %}</footer>
